@@ -1,0 +1,17 @@
+Genome Firewall
+
+This prototype reuses the public Genome Firewall / Biohackers implementation:
+
+  https://github.com/omarjku/Biohackers
+  (canonical clone URL: https://github.com/Omar-s-Org/Biohackers.git)
+
+The upstream README claims the MIT License. The GitHub repository metadata
+did not attach an SPDX license file at the time of reuse; a MIT LICENSE is
+included here to match that claim. Preserve attribution to the original
+authors and to:
+
+  AMRFinderPlus (NCBI, public domain) — https://github.com/ncbi/amr
+  BV-BRC genomes and laboratory AST labels — https://www.bv-brc.org/
+  scikit-learn
+
+This application is a research prototype, not a clinical diagnostic.

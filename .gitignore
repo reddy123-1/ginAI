@@ -1,0 +1,35 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+models/*.joblib
+models/*.pkl
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/fasta_demo/
+!data/raw/fasta_demo/**
+# Small, non-regenerable inputs the real-data results depend on. The FASTAs they
+# came from are too large to ship, so without these a clone cannot reproduce
+# anything. genome_clusters_mash.csv is the one adapt_real_data.py actually uses
+# (102 clusters); genome_clusters.csv is the coarse 60/58/1 fallback and is NOT
+# usable for a grouped split. See docs/REPRODUCING.md.
+!data/raw/files.zip
+!data/raw/genome_clusters.csv
+!data/raw/genome_clusters_mash.csv
+# Derived — rebuild with `python src/adapt_real_data.py`.
+# Keep the committed contract files used to fit the demo model.
+# data/processed/
+# Genome FASTA bundles: 187 MB compressed, over GitHub's 100 MB per-file limit.
+fasta_genomes_used.zip
+*.fna
+!data/raw/fasta_demo/*.fna
+frontend/node_modules/
+frontend/dist/
+.DS_Store
+venv/
+.venv/
+# Local agent-tooling artifacts (RTK / ruvector) — never part of the project.
+ruvector.db
+agentdb.rvf
+*.rvf
+*.rvf.lock
